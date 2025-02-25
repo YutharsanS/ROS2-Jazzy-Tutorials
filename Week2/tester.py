@@ -64,7 +64,7 @@ class LabTester:
         o = np.array([0, 1, 0])
         rotation = rotation_two_vector(a, o, point)
         self.assert_array_almost_equal(
-            rotation, [1, 1, 1], decimal=3, message="No Rotation"
+            rotation, [1, 1, -1], decimal=3, message="No Rotation"
         )
 
     def test_rotation_eigen_vector(self, rotation_eigen_vector: Callable):
@@ -98,7 +98,7 @@ class LabTester:
 
         # Test 1: No rotation
         point = np.array([1, 1, 1])
-        q = np.array([1, 0, 0, 1])
+        q = np.array([1, 0, 0, 0])
         rotation = rotation_unit_quaternion(q, point)
         self.assert_array_almost_equal(
             rotation, [1, 1, 1], decimal=3, message="No Rotation"

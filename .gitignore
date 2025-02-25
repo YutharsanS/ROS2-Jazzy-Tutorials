@@ -39,3 +39,9 @@
 
 # Solutions
 solution*.ipynb
+
+# Worktrees
+*-worktree/
+
+# Pycache
+__pycache__/
